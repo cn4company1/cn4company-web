@@ -176,3 +176,9 @@ h2, h3 {
     height: auto !important;
   }
 }
+a.service-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
