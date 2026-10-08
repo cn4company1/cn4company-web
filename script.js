@@ -28,3 +28,49 @@ function showToast(message) {
     toast.classList.remove('show');
   }, 2000);
 }
+// 클립보드 복사 함수
+function copyToClipboard(text, message) {
+  if (navigator.clipboard && window.isSecureContext) {
+    // 최신 브라우저 방식 (HTTPS 및 Netlify 환경)
+    navigator.clipboard.writeText(text).then(function() {
+      showToast(message);
+    }).catch(function(err) {
+      fallbackCopyTextToClipboard(text, message);
+    });
+  } else {
+    // 구형 브라우저 또는 대체 방식
+    fallbackCopyTextToClipboard(text, message);
+  }
+}
+
+// 대체 복사 방식 (ExecCommand)
+function fallbackCopyTextToClipboard(text, message) {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.style.position = "fixed";  // 모바일 스크롤 튐 방지
+  textArea.style.left = "-999999px";
+  textArea.style.top = "-999999px";
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  
+  try {
+    document.execCommand('copy');
+    showToast(message);
+  } catch (err) {
+    alert("복사에 실패했습니다. 직접 선택하여 복사해 주세요.");
+  }
+  
+  document.body.removeChild(textArea);
+}
+
+// 토스트 알림 표시 함수
+function showToast(message) {
+  const toast = document.getElementById('copy-toast');
+  if (!toast) return;
+  toast.textContent = message;
+  toast.classList.add('show');
+  setTimeout(function() {
+    toast.classList.remove('show');
+  }, 2000);
+}
