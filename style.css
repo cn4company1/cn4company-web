@@ -182,3 +182,35 @@ a.service-card {
   display: block;
   cursor: pointer;
 }
+/* 프로젝트 카드 및 2장 사진 갤러리 레이아웃 */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.project-gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* 모바일 전용 높이 조절 */
+@media (max-width: 768px) {
+  .project-gallery img {
+    height: 140px;
+  }
+}
