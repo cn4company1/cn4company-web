@@ -536,3 +536,37 @@ body:has(.tournament-hero) .cn4-digital-showcase{padding:0!important;overflow:hi
         font-size: 12px !important;
     }
 }
+
+/* CN4 Tournament: 모바일 대회 진행 과정 2 × 2 (실제 HTML 클래스 적용) */
+@media screen and (max-width: 767px) {
+  body:has(.tournament-hero) #workflow .workflow-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+  body:has(.tournament-hero) #workflow .workflow-grid > div {
+    min-width: 0 !important;
+    padding: 16px 9px !important;
+    margin: 0 !important;
+    border-top: 1px solid #b89455;
+  }
+  body:has(.tournament-hero) #workflow .workflow-grid b {
+    font-size: 26px !important;
+    line-height: 1.2;
+  }
+  body:has(.tournament-hero) #workflow .workflow-grid h3 {
+    margin: 15px 0 10px !important;
+    font-size: clamp(14px, 3.6vw, 18px) !important;
+    line-height: 1.4 !important;
+    word-break: keep-all;
+  }
+  body:has(.tournament-hero) #workflow .workflow-grid p {
+    font-size: 11px !important;
+    line-height: 1.65 !important;
+    overflow-wrap: anywhere;
+  }
+  body:has(.tournament-hero) #workflow .workflow-grid p br {
+    display: none;
+  }
+}
