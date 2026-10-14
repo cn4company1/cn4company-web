@@ -570,3 +570,51 @@ body:has(.tournament-hero) .cn4-digital-showcase{padding:0!important;overflow:hi
     display: none;
   }
 }
+
+
+/* CN4 모바일: 서비스 3개 카드를 세로로 간결하게 표시 */
+@media screen and (max-width: 767px) {
+  body:has(.tournament-hero) #services.section {
+    padding-top: 42px !important;
+    padding-bottom: 42px !important;
+  }
+  body:has(.tournament-hero) #services .section-head {
+    margin-bottom: 22px !important;
+  }
+  body:has(.tournament-hero) #services .section-head .eyebrow {
+    margin-bottom: 12px !important;
+  }
+  body:has(.tournament-hero) #services .t-service-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 9px !important;
+    margin-top: 18px !important;
+  }
+  body:has(.tournament-hero) #services .t-service {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 17px 18px !important;
+  }
+  body:has(.tournament-hero) #services .t-service > span {
+    font-size: 10px !important;
+    line-height: 1.3 !important;
+    letter-spacing: .08em !important;
+  }
+  body:has(.tournament-hero) #services .t-service h3 {
+    margin: 7px 0 5px !important;
+    font-size: 18px !important;
+    line-height: 1.35 !important;
+  }
+  body:has(.tournament-hero) #services .t-service p {
+    margin: 0 !important;
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    overflow-wrap: anywhere;
+  }
+  body:has(.tournament-hero) #services .t-service p br {
+    display: none;
+  }
+}
