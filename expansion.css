@@ -96,3 +96,27 @@ body:has(.tournament-hero) .tournament-copy h1 strong {font-weight: 500;}
 .header .nav-wrap .cn4-back-arrow{display:inline-block;font-size:17px;line-height:1;transition:transform .28s ease}
 .header .nav-wrap .cn4-back-link:hover .cn4-back-arrow,.header .nav-wrap .cn4-back-link:focus-visible .cn4-back-arrow{transform:translateX(-4px)}
 @media(prefers-reduced-motion:reduce){.header .nav-wrap .cn4-back-arrow{transition:none}.header .nav-wrap .cn4-back-link:hover .cn4-back-arrow{transform:none}}
+
+/* Tournament services: clickable cards linking to the contact section */
+body:has(.tournament-hero) .t-service-grid .cn4-service-clickable {
+  display:block; color:inherit; text-decoration:none; cursor:pointer;
+  transition:background-color .3s ease, border-color .3s ease, box-shadow .3s ease, transform .3s ease;
+}
+body:has(.tournament-hero) .t-service-grid .cn4-service-clickable:hover,
+body:has(.tournament-hero) .t-service-grid .cn4-service-clickable:focus-visible {
+  background:#f4eddd; border-color:#c6a563;
+  box-shadow:0 14px 32px rgba(16,39,31,.12); transform:translateY(-5px);
+}
+body:has(.tournament-hero) .t-service-grid .cn4-service-clickable h3 {
+  transition:color .3s ease;
+}
+body:has(.tournament-hero) .t-service-grid .cn4-service-clickable:hover h3,
+body:has(.tournament-hero) .t-service-grid .cn4-service-clickable:focus-visible h3 {color:#a47c37;}
+body:has(.tournament-hero) .t-service-grid .cn4-service-clickable:focus-visible {outline:2px solid #b8924f;outline-offset:3px;}
+html {scroll-behavior:smooth;}
+#contact {scroll-margin-top:110px;}
+@media(prefers-reduced-motion:reduce){
+ html {scroll-behavior:auto;}
+ body:has(.tournament-hero) .t-service-grid .cn4-service-clickable {transition:none;}
+ body:has(.tournament-hero) .t-service-grid .cn4-service-clickable:hover {transform:none;}
+}
