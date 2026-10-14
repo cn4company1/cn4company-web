@@ -66,3 +66,27 @@ body:has(.tournament-hero) .workflow-grid h3 {
   word-break: keep-all;
 }
 body:has(.tournament-hero) .tournament-copy h1 strong {font-weight: 500;}
+
+/* CN4company: right-aligned gold BACK button */
+.header .nav-wrap .cn4-back-link{
+  display:inline-flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-left:18px;padding:13px 21px;
+  background:#c6a563;color:#10271f;border:1px solid #c6a563;
+  font-family:Inter,'Noto Sans KR',sans-serif;font-size:12px;font-weight:700;
+  letter-spacing:.1em;text-decoration:none;white-space:nowrap;
+  transition:background-color .28s ease,color .28s ease,border-color .28s ease,transform .28s ease,box-shadow .28s ease;
+}
+.header .nav-wrap .cn4-back-link:hover,
+.header .nav-wrap .cn4-back-link:focus-visible{
+  background:#10271f;color:#e5c47e;border-color:#10271f;
+  transform:translateY(-2px);box-shadow:0 5px 16px rgba(16,39,31,.18);
+}
+.header .nav-wrap .cn4-back-link:focus-visible{outline:2px solid #c6a563;outline-offset:3px}
+@media(max-width:900px){
+  .header .nav-wrap .menu-btn{margin-left:auto}
+  .header .nav-wrap .cn4-back-link{margin-left:12px;padding:11px 15px;font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){
+  .header .nav-wrap .cn4-back-link{transition:none}
+  .header .nav-wrap .cn4-back-link:hover{transform:none}
+}
