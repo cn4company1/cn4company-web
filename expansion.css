@@ -676,3 +676,14 @@ body:has(.tournament-hero) .cn4-digital-showcase{padding:0!important;overflow:hi
         font-size: 13px !important;
     }
 }
+
+/* 서비스 소개 설명 문구 위치 조정 */
+@media (min-width: 768px) {
+    .premium-services-lead {
+        position: relative;
+        left: -35px;
+        width: calc(100% + 35px);
+        max-width: none;
+        word-break: keep-all;
+    }
+}
