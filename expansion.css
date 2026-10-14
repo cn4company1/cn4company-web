@@ -301,3 +301,52 @@ body:has(.tournament-hero) .cn4-digital-showcase{padding:0!important;overflow:hi
         font-size: 15px !important;
     }
 }
+
+/* =========================================
+   당구대회 서비스 카드 모바일 3열 배치
+========================================= */
+
+@media (max-width: 767px) {
+
+    /* 서비스 카드 3개를 가로로 배치 */
+    .tournament-service-grid,
+    .tournament-services-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+        width: 100% !important;
+    }
+
+    /* 각 카드 크기 및 여백 */
+    .tournament-service-grid > *,
+    .tournament-services-grid > * {
+        min-width: 0 !important;
+        width: 100% !important;
+        min-height: 220px !important;
+        padding: 12px 8px !important;
+        box-sizing: border-box;
+    }
+
+    /* 카드 제목 */
+    .tournament-service-grid h3,
+    .tournament-services-grid h3 {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+        word-break: keep-all;
+    }
+
+    /* 카드 설명 */
+    .tournament-service-grid p,
+    .tournament-services-grid p {
+        font-size: 10px !important;
+        line-height: 1.6 !important;
+        word-break: keep-all;
+    }
+
+    /* 영문 카테고리 */
+    .tournament-service-grid small,
+    .tournament-services-grid small {
+        font-size: 9px !important;
+        letter-spacing: 0 !important;
+    }
+}
