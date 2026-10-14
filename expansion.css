@@ -463,3 +463,76 @@ body:has(.tournament-hero) .cn4-digital-showcase{padding:0!important;overflow:hi
         word-break: keep-all;
     }
 }
+
+/* =========================================
+   모바일 인트로 카드 텍스트 높이 통일
+========================================= */
+
+@media (max-width: 767px) {
+
+    /* 두 카드 높이 통일 */
+    .intro-body .choice-grid {
+        align-items: stretch !important;
+    }
+
+    .intro-body .choice-card {
+        height: 420px !important;
+        min-height: 420px !important;
+        position: relative;
+    }
+
+    /* 카드 내부 텍스트를 동일한 구조로 정렬 */
+    .intro-body .choice-overlay {
+        position: absolute !important;
+        inset: 0 !important;
+
+        display: grid !important;
+
+        grid-template-rows:
+            34px
+            78px
+            minmax(65px, auto)
+            1fr;
+
+        align-content: end !important;
+
+        padding: 18px 12px !important;
+        box-sizing: border-box;
+    }
+
+    /* 영문 카테고리 */
+    .intro-body .choice-overlay small {
+        align-self: end !important;
+        margin: 0 !important;
+        font-size: 8px !important;
+        line-height: 1.4 !important;
+    }
+
+    /* 큰 제목 */
+    .intro-body .choice-overlay h2 {
+        align-self: center !important;
+        margin: 0 !important;
+
+        font-size: clamp(16px, 4vw, 23px) !important;
+        line-height: 1.35 !important;
+        word-break: keep-all;
+    }
+
+    /* 설명 문구 */
+    .intro-body .choice-overlay p {
+        align-self: start !important;
+        margin: 0 !important;
+
+        font-size: 10px !important;
+        line-height: 1.6 !important;
+        word-break: keep-all;
+    }
+
+    /* 자세히 보기 */
+    .intro-body .choice-overlay > span {
+        align-self: end !important;
+        margin: 0 !important;
+
+        font-size: 12px !important;
+    }
+}
