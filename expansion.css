@@ -90,3 +90,9 @@ body:has(.tournament-hero) .tournament-copy h1 strong {font-weight: 500;}
   .header .nav-wrap .cn4-back-link{transition:none}
   .header .nav-wrap .cn4-back-link:hover{transform:none}
 }
+
+/* Directional arrow within gold BACK button */
+.header .nav-wrap .cn4-back-link{gap:9px}
+.header .nav-wrap .cn4-back-arrow{display:inline-block;font-size:17px;line-height:1;transition:transform .28s ease}
+.header .nav-wrap .cn4-back-link:hover .cn4-back-arrow,.header .nav-wrap .cn4-back-link:focus-visible .cn4-back-arrow{transform:translateX(-4px)}
+@media(prefers-reduced-motion:reduce){.header .nav-wrap .cn4-back-arrow{transition:none}.header .nav-wrap .cn4-back-link:hover .cn4-back-arrow{transform:none}}
