@@ -618,3 +618,61 @@ body:has(.tournament-hero) .cn4-digital-showcase{padding:0!important;overflow:hi
     display: none;
   }
 }
+
+/* =========================================
+   창업·폐업 컨설팅 카드 높이 40% 축소
+   PC 화면에만 적용
+========================================= */
+
+@media (min-width: 768px) {
+
+    /* 카드 2개의 높이 축소 */
+    .premium-service-grid .premium-service-card {
+        height: 380px !important;
+        min-height: 0 !important;
+        box-sizing: border-box;
+    }
+
+    /* 카드 내부 상단 */
+    .premium-service-top {
+        top: 20px !important;
+        left: 24px !important;
+        right: 24px !important;
+    }
+
+    /* 카드 내부 하단 콘텐츠 */
+    .premium-service-bottom {
+        padding: 22px 28px !important;
+    }
+
+    /* 큰 제목 */
+    .premium-service-bottom h3 {
+        font-size: clamp(30px, 3vw, 45px) !important;
+        line-height: 1.15 !important;
+        margin: 10px 0 !important;
+    }
+
+    /* 설명 문구 */
+    .premium-service-bottom p {
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 12px !important;
+    }
+
+    /* 태그 간격 */
+    .premium-service-tags {
+        gap: 6px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .premium-service-tags span {
+        padding: 7px 10px !important;
+        font-size: 11px !important;
+    }
+
+    /* 상담 문의하기 */
+    .premium-service-link {
+        padding-top: 12px !important;
+        font-size: 13px !important;
+    }
+}
