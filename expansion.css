@@ -414,3 +414,52 @@ body:has(.tournament-hero) .cn4-digital-showcase{padding:0!important;overflow:hi
         font-size: 11px !important;
     }
 }
+
+/* =========================================
+   당구대회 진행 과정 모바일 2 × 2 배치
+========================================= */
+
+@media (max-width: 767px) {
+
+    /* 진행 과정 카드 4개를 2열로 배치 */
+    .tournament-process-grid,
+    .tournament-steps-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    /* 각 단계 카드 */
+    .tournament-process-grid > *,
+    .tournament-steps-grid > * {
+        width: 100% !important;
+        min-width: 0 !important;
+        min-height: 200px !important;
+        padding: 14px 10px !important;
+        box-sizing: border-box;
+    }
+
+    /* 단계 번호 */
+    .tournament-process-grid strong,
+    .tournament-steps-grid strong {
+        font-size: 28px !important;
+        line-height: 1.2 !important;
+    }
+
+    /* 단계 제목 */
+    .tournament-process-grid h3,
+    .tournament-steps-grid h3 {
+        font-size: 15px !important;
+        line-height: 1.4 !important;
+        word-break: keep-all;
+    }
+
+    /* 단계 설명 */
+    .tournament-process-grid p,
+    .tournament-steps-grid p {
+        font-size: 11px !important;
+        line-height: 1.6 !important;
+        word-break: keep-all;
+    }
+}
