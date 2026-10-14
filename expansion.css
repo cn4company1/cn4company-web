@@ -168,3 +168,61 @@ body:has(.tournament-hero) .cn4-digital-showcase{padding:0!important;overflow:hi
     font-weight: 600;
     font-style: normal;
 }
+
+/* =========================================
+   CN4company 모바일 ABOUT 4분할 디자인
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .about .stats {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 0 !important;
+        width: 100%;
+    }
+
+    .about .stats > div {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: space-between !important;
+
+        min-width: 0;
+        min-height: 170px;
+        padding: 22px 14px !important;
+        margin: 0 !important;
+
+        border: none !important;
+        border-top: 1px solid #d8d2c5 !important;
+        border-radius: 0 !important;
+        box-sizing: border-box;
+    }
+
+    /* 왼쪽 두 칸의 세로 구분선 */
+    .about .stats > div:nth-child(odd) {
+        border-right: 1px solid #d8d2c5 !important;
+    }
+
+    /* 위쪽 두 칸의 가로 구분선 */
+    .about .stats > div:nth-child(-n+2) {
+        border-bottom: 1px solid #d8d2c5 !important;
+    }
+
+    /* 숫자 디자인 */
+    .about .stats strong {
+        display: block;
+        font-size: 48px !important;
+        line-height: 1.1;
+        color: #b99753 !important;
+    }
+
+    /* 설명 디자인 */
+    .about .stats span {
+        display: block;
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+        color: #14271f !important;
+        word-break: keep-all;
+    }
+}
