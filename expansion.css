@@ -148,3 +148,23 @@ body:has(.tournament-hero) .cn4-digital-showcase{padding:0!important;overflow:hi
 @media(max-width:950px){.cn4-digital-layout{grid-template-columns:1fr}.cn4-digital-content{padding:72px 7vw}.cn4-digital-visual{min-height:490px}}
 @media(max-width:600px){.cn4-digital-content{padding:58px 24px}.cn4-digital-visual{min-height:410px}.cn4-digital-image-top{left:20px;right:20px;top:22px;font-size:9px;letter-spacing:1px}.cn4-digital-image-caption{left:24px;bottom:35px;right:48px}.cn4-digital-corner{right:20px;bottom:32px}}
 @media(prefers-reduced-motion:reduce){.cn4-digital-image-frame img{transition:none}}
+
+/* =========================================
+   CN4company 인트로 메인 제목 글꼴 통일
+========================================= */
+
+/* 고급스러운 명조체 불러오기 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap');
+
+/* 인트로 페이지 큰 제목 */
+.intro-shell h1 {
+    font-family: 'Noto Serif KR', serif !important;
+    font-weight: 600;
+}
+
+/* 금색으로 강조된 문구 */
+.intro-shell h1 em {
+    font-family: 'Noto Serif KR', serif !important;
+    font-weight: 600;
+    font-style: normal;
+}
